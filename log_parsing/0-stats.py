@@ -19,7 +19,7 @@ LOG_RE = re.compile(
     r'^(?P<ip>\S+) - '\
     r'\[(?P<date>[^\]]+)\] '\
     r'"GET /projects/260 HTTP/1\.1" '\
-    r'(?P<status>\S+) (?P<size>\S+)$'
+    r'(?P<status>\d+) (?P<size>\d+)$'
 )
 
 VALID_STATUS = {"200", "301", "400", "401", "403", "404", "405", "500"}
