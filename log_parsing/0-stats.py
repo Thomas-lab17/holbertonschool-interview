@@ -63,9 +63,11 @@ def main():
                 last_print_at = line_count
 
     except KeyboardInterrupt:
-        if last_print_at != line_count:
-            _print_stats(total_size, status_counts)
-        raise
+        _print_stats(total_size, status_counts)
+        return
+
+    if last_print_at != line_count:
+        _print_stats(total_size, status_counts)
 
 
 if __name__ == "__main__":
