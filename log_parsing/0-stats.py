@@ -66,9 +66,8 @@ def main():
         _print_stats(total_size, status_counts)
         return
 
-    if last_print_at != line_count:
+    if last_print_at != line_count or line_count == 0:
         _print_stats(total_size, status_counts)
-
 
 if __name__ == "__main__":
     main()
